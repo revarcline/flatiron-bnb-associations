@@ -3,13 +3,13 @@ require 'rails_helper'
 describe Review do
   let(:nyc) { City.create(name: 'NYC') }
   let(:fidi) { Neighborhood.create(name: 'Fi Di', city: nyc) }
-  let(:amanda) { User.create(name: "Amanda") }
-  let(:logan) { User.create(name: "Logan") }
+  let(:amanda) { User.create(name: 'Amanda') }
+  let(:logan) { User.create(name: 'Logan') }
   let(:listing) do
     Listing.create(
       address: '123 Main Street',
-      listing_type: "private room",
-      title: "Beautiful Apartment on Main Street",
+      listing_type: 'private room',
+      title: 'Beautiful Apartment on Main Street',
       description: "My apartment is great. there's a bedroom. close to subway....blah blah",
       price: 50.00,
       neighborhood: fidi,
@@ -26,7 +26,7 @@ describe Review do
   end
   let(:review) do
     Review.create(
-      description: "This place was great!",
+      description: 'This place was great!',
       rating: 5,
       guest: logan,
       reservation: reservation
@@ -34,7 +34,7 @@ describe Review do
   end
 
   it 'has a description' do
-    expect(review.description).to eq("This place was great!")
+    expect(review.description).to eq('This place was great!')
   end
 
   it 'has a rating' do
